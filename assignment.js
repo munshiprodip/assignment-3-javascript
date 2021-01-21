@@ -61,7 +61,7 @@ function hotelCost(day){
 //Task-4:  Find your large frien name
 function megaFriend(friendsNames){
     if (typeof friendsNames != "object" || friendsNames.length == 0 ) {
-        return "Please enter a list of your friends."
+        return "Please enter a list of your friends.";
     }else{
         let biggestName = friendsNames[0];
         for (let i = 0; i < friendsNames.length; i++) {
