@@ -7,7 +7,7 @@ function kilometerToMeter(kilometer){
     if(typeof kilometer != "number" || kilometer<0){
         return "Please enter a valide number";
     }else{
-        meter = kilometer * 1000;       //We know 1KM = 100M
+        meter = kilometer * 1000;       //We know 1KM = 1000M
     }
     return meter;
 }
@@ -58,7 +58,7 @@ function hotelCost(day){
 }
 
 
-//Task-4:  Find your large frien name
+//Task-4:  Find your large friend name
 function megaFriend(friendsNames){
     if (typeof friendsNames != "object" || friendsNames.length == 0 ) {
         return "Please enter a list of your friends.";
