@@ -1,6 +1,7 @@
-// 
+// https://github.com/munshiprodip/assignment-3-javascript
 
-// Convert kilometer to meter
+
+//Task-1:  Convert kilometer to meter
 function kilometerToMeter(kilometer){
     let meter = 0;
     if(typeof kilometer != "number" || kilometer<0){
@@ -11,7 +12,7 @@ function kilometerToMeter(kilometer){
     return meter;
 }
 
-// Calculate your budget
+//Task-2:  Calculate your budget
 function budgetCalculator(watch, mobile, laptop){
     let eachWatchPrice = 50;
     let eachMobilePrice = 100;
@@ -30,40 +31,36 @@ function budgetCalculator(watch, mobile, laptop){
     return totalCost;
 }
 
-// Calculate hotel cost
+//Task-3:  Calculate hotel cost
 function hotelCost(day){
     let totalCost = 0;
     if(typeof day != "number" || day<0){
-
         return "Please enter a valide number";
 
     }else if(day <= 10){
-
         totalCost =  day * 100;
 
     }else if(day <= 20){
-        let costFirstTenDayes = 10 * 100;
+        let costFirstTenDays = 10 * 100;
         let reminingDays = day-10;
-        let costAfterTenDayes = reminingDays * 80;
-        totalCost =  costFirstTenDayes + costAfterTenDayes;
+        let costAfterTenDays = reminingDays * 80;
+        totalCost =  costFirstTenDays + costAfterTenDays;
 
     }else if(day > 20){
-        let costFirstTenDayes = 10 * 100;
-        let costAfterTenDayes = 10 * 80;
+        let costFirstTenDays = 10 * 100;
+        let costAfterTenDays = 10 * 80;
         let reminingDays = day-20;
-        let costAfterTwentyDayes = reminingDays * 50;
+        let costAfterTwentyDays = reminingDays * 50;
 
-        totalCost =  costFirstTenDayes + costAfterTenDayes + costAfterTwentyDayes;
-
+        totalCost =  costFirstTenDays + costAfterTenDays + costAfterTwentyDays;
     }
-
     return totalCost;
 }
 
-// Find your large frien name
 
+//Task-4:  Find your large frien name
 function megaFriend(friendsNames){
-    if (typeof friendsName != "object" || friendsName.length == 0 ) {
+    if (typeof friendsNames != "object" || friendsNames.length == 0 ) {
         return "Please enter a list of your friends."
     }else{
         let biggestName = friendsNames[0];
@@ -72,18 +69,23 @@ function megaFriend(friendsNames){
                 biggestName = friendsNames[i];
             }
         }
+        return biggestName;
     }
-    
-    return biggestName;
 }
 
 
-// console.log("5 Kilometer = ", kilometerToMeter(5), "meter");
 
-console.log(budgetCalculator("5", "5", "5"));
 
-// console.log(hotelCost(5));
 
-// friendsNames = ["Tariqul Islam", "Alamgir Sarker", "Amirul Islam", "Suman Sutradhar"]
+// convert 5KM to Meter
+console.log(kilometerToMeter(5));
 
-// console.log(megaFriend(friendsNames));
+// Budget for 10 Watches, 5 Mobiles and 1 Laptop
+console.log(budgetCalculator(10, 5, 1));
+
+// Total hotel cost for 25 days
+console.log(hotelCost(25));
+
+// Find the largest name of your frinds
+friendsNames = ["Tariqul Islam", "Alamgir Sarker", "Amirul Islam", "Suman Sutradhar"];
+console.log(megaFriend(friendsNames));
